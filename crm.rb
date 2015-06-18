@@ -28,7 +28,11 @@ get '/find' do
   puts "Workin' on it"
 end
 
-get '/contacts/1001' do
-  @show_contact = $rolodex.find(1001)
-    erb :show_contact
+get '/contacts/:id' do
+  @show_contact = $rolodex.find(params[:id].to_i)
+    if @show_contact
+      erb :show_contact
+    else
+      raise Sinatra::NotFound
+    end
 end
