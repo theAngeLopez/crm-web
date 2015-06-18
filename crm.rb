@@ -46,5 +46,41 @@ get '/contacts/:id/edit' do
     end
 end
 
+put '/contacts/:id' do
+  @edit_contact = $rolodex.find(params[:id].to_i)
+    if @edit_contact
+      @edit_contact.first_name = params[:first_name]
+      @edit_contact.last_name = params[:last_name]
+      @edit_contact.email = params[:email]
+      @edit_contact.note = params[:note]
+
+      redirect to('/contacts')
+    else
+      raise Sinatra::NotFound
+    end
+end
+
+delete '/contacts/:id' do
+  @delete_contact = $rolodex.find(params[:id].to_i)
+    if @delete_contact
+      $rolodex.remove_contact(@delete_contact)
+      redirect to ('/contacts')
+    else
+      raise Sinatra::NotFound
+    end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

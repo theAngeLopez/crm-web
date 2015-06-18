@@ -11,5 +11,10 @@
   <p>Email: <%= @show_contact.email %></p>
   <p>Note: </p>
   <p><%= @show_contact.note %></p>
+
+  <form action="/contacts/<%= @show_contact.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" name="Delete Contact" value="Delete Contact">
+</form>
 </body>
 </html>
