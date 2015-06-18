@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+  <title>Edit a Contact</title>
+</head>
+
+<body>
+<h1>Edit a Contact</h1>
+<form action="/contacts/<%= @edit_contact.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <input type="text" name="first_name" value="<%= @edit_contact.first_name %>">
+  <input type="text" name="last_name" value="<%= @edit_contact.last_name %>">
+  <input type="text" name="email" value="<%= @edit_contact.email %>">
+  <input type="text" name="note" value="<%= @edit_contact.note %>">
+  <input type="submit" name="Submit">
+</form>
+</body>
+</html>
