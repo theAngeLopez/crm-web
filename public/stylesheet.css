@@ -1,0 +1,44 @@
+header {
+  background-image: url(http://f.fwallpapers.com/images/animal-friendship.png);
+  background-position: center;
+  background-size: 100%;
+  font-family: 'Satisfy', cursive;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 300%;
+  padding: 10%;
+  left: 0px;
+  right: 0px;
+  /*margin-bottom: 0;*/
+}
+
+nav {
+  background-color: #4D9C8D;
+  color: white;
+  text-align: right;
+  padding-top: 2px;
+  padding-bottom:2px;
+  left: 0px;
+  right: 0px;
+}
+nav li {
+  list-style: none;
+  display: inline;
+  padding-left: 75px;
+  font-family: georgia;
+  font-size: 1em;
+}
+
+h1 {
+  color: #1A7160;
+  text-align: center;
+}
+
+footer h3{
+  text-align: center;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  height: 30px;
+  background: #4D9C8D;
+}

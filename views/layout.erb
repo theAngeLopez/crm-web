@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=News+Cycle' rel='stylesheet' type='text/css'>
+  <title>My Best Friends Manager</title>
+</head>
+
+<body>
+  <header><%= @@crm_app_name %></header>
+<nav>
+  <ul>
+    <li><a href="contacts">All Friends</a></li>
+    <li><a href="contacts/new">Add a Friend</a></li>
+    <li><a href="">Find a Friend</a></li>
+    <li><a href="">Edit a Friend</a></li>
+  </ul>
+</nav>
+
+<%= yield %>
+
+<footer>
+  <h3>It's tough being as popular as you are. Let us help.</h3>
+</footer>
+
+</body>
+</html>

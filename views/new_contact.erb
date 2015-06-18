@@ -2,18 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Add a New Contact</title>
+  <title>New Friend</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheet.css">
 </head>
 
 <body>
-  <h1>Create New Contact</h1>
-<form action="/contacts" method="post">
-  <input type="text" name="first_name">
-  <input type="text" name="last_name">
-  <input type="text" name="email">
-  <input type="text" name="note">
-  <input type="submit" name="Submit">
-</form>
+  <h1>I made a new friend!</h1>
+  <h2>Add them here:</h2>
 
+  <form action="/contacts" method="post">
+    <label for="contact_first">First name</label>
+      <p><input type="text" name="first_name" id="contact_first"></p>
+    <h3>Last name</h3>
+      <p><input type="text" name="last_name"></p>
+    <h3>Email</h3>
+      <p><input type="email" name="email"></p>
+    <h3>Note</h3>
+      <p><input type="text" name="note"></p>
+      <p><input type="submit" name="Submit" value="Make Friend"></p>
+
+  </form>
 </body>
 </html>

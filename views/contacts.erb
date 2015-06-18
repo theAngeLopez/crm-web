@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contacts</title>
-  <h1>All Contacts</h1>
+  <title>All Friends</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheet.css">
 </head>
 
 <body>
+<h1>All Your Friends:</h1>
+
+<div id="friend_list">
 <ul>
 <% $rolodex.contacts.each do |contact| %>
-  <li><%= contact.first_name %> <%= contact.last_name %>: <%= contact.email %> - <%= contact.note %></li>
+  <li><%= contact.id %> <%= contact.first_name %> <%= contact.last_name %>: <%= contact.email %> - <%= contact.note %></li>
 <% end %>
 </ul>
+</div>
 
 </body>
 </html>
