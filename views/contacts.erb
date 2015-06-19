@@ -11,7 +11,7 @@
 <div id="friend_list">
 <ul>
 <% $rolodex.contacts.each do |contact| %>
-  <li><%= contact.id %> <%= contact.first_name %> <%= contact.last_name %>: <%= contact.email %> - <%= contact.note %></li>
+  <li><a href="/contacts/<%= contact.id%>">(<%= contact.id %>) <%= contact.first_name %>  <%= contact.last_name %>: <p><%= contact.email %> - <%= contact.note %></a></p></li>
 <% end %>
 </ul>
 </div>

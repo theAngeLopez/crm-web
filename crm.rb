@@ -1,9 +1,26 @@
 require_relative 'contact'
 require_relative 'rolodex'
 require 'sinatra'
+require 'data_mapper'
 
 $rolodex= Rolodex.new
 @@crm_app_name = "My Best Friends Manager"
+
+DataMapper.setup(:default, "sqlite3:crm_development.sqlite3")
+
+# Class
+class Contact
+  include DataMapper::Resource
+
+  property :id, Serial
+  property :first_name, String
+  property :last_name, String
+  property :email, String
+  property :notes, Text
+end
+
+DataMapper.finalize
+DataMapper.auto_upgrade!
 
 # Routes
 get '/' do
@@ -22,10 +39,6 @@ end
 
 get '/contacts/new' do
   erb :new_contact
-end
-
-get '/find' do
-  puts "Workin' on it"
 end
 
 get '/contacts/:id' do

@@ -9,15 +9,14 @@
 </head>
 
 <body>
-  <header><%= @@crm_app_name %></header>
-<nav>
+ <nav>
   <ul>
-    <li><a href="contacts">All Friends</a></li>
-    <li><a href="contacts/new">Add a Friend</a></li>
-    <li><a href="">Find a Friend</a></li>
-    <li><a href="">Edit a Friend</a></li>
+    <li><a href="/contacts">All Friends</a></li>
+    <li><a href="/contacts/new">+ Friend</a></li>
   </ul>
 </nav>
+<header><%= @@crm_app_name %></header>
+
 
 <%= yield %>
 
